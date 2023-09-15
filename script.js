@@ -1,30 +1,19 @@
 const players = ["John", "Bob", "Alice", "Poppy"];
-
 const person = {
   name: "John Doe",
   age: 80,
 };
 
-const team = {
-	0:"John",
-	1:"Bob",
-	2:"Alice",
-	3:"Poppy",
-};
+// Create a reference to the players array
+const team = players;
 
-const team1 = {
-	"John",
-	"Bob",
-	"Alice",
-	"Poppy",
-};
+// Create a shallow copy of the players array
+const team1 = players.slice();
 
-const cap1[] = person[];
-// Write your code here, make sure the name of variables is exactly same as mentioned in the problem statement
+// Create a shallow copy of the person object
+const cap1 = Object.assign({}, person);
 
-
-window.players = players;
-window.person = person;
-window.team = team;
-window.team1 = team1;
-window.cap1 = cap1;
+// Now you have the desired variables: team, team1, and cap1
+console.log("team:", team);
+console.log("team1:", team1);
+console.log("cap1:", cap1);
